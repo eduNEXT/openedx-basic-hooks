@@ -3,8 +3,10 @@
 
 -r test.txt               # Core and testing dependencies for this package
 
+black                     # code formatter
 edx-lint                  # edX pylint rules and plugins
 isort                     # to standardize order of imports
 pycodestyle               # PEP 8 compliance validation
 pydocstyle                # PEP 257 compliance validation
 twine                     # Utility for publishing Python packages on PyPI.
+wheel                     # extension for building wheels that provides the bdist_wheel setuptools

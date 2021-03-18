@@ -1,11 +1,16 @@
+"""
+Filters that can be used with the pre_register filter.
+"""
+
 from datetime import datetime
 
 from django.utils.translation import ugettext as _
+from edx_django_utils.hooks.exceptions import (  # pylint: disable=no-name-in-module,import-error
+    HookException,
+)
 
-from edx_django_utils.hooks.exceptions import HookException
 
-
-def check_year_of_birth(data, *args, **kwargs):
+def check_year_of_birth(data, *args, **kwargs):  # pylint: disable=unused-argument
     """
     Check if the user year of birth was at least 21 years ago.
     """
@@ -18,8 +23,8 @@ def check_year_of_birth(data, *args, **kwargs):
                 _("Your year of birth must be {} or before.").format(current_year - 21),
                 status_code=400,
             )
-    except ValueError:
+    except ValueError as err:
         raise HookException(
             _("Invalid year of birth."),
             status_code=400,
-        )
+        ) from err
