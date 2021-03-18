@@ -1,0 +1,3 @@
+"""
+Plugin settings module.
+"""

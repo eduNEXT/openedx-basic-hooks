@@ -1,8 +1,14 @@
-from openedx_basic_hooks.integrations.twitter import publish_in_twitter
+"""
+Actions that can be triggered with the post_register trigger.
+"""
 from django.utils.translation import ugettext as _
 
+from openedx_basic_hooks.integrations.twitter import publish_in_twitter
 
-def post_register_tweet(user, registration, *args, **kwargs):
+
+def post_register_tweet(
+    user, registration, *args, **kwargs
+):  # pylint: disable=unused-argument
     """
     Publish a tweet with a welcome the platform to an User on registration.
     """
