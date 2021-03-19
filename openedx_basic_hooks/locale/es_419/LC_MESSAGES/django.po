@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-18 12:22-0400\n"
+"POT-Creation-Date: 2021-03-19 15:30-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: openedx_basic_hooks/actions/post_register.py:9
+#: build/lib/openedx_basic_hooks/actions/post_register.py:15
+#: openedx_basic_hooks/actions/post_register.py:15
 #, python-brace-format
 msgid "{user_full_name}, welcome to the platform!"
 msgstr "{user_full_name}, ¡te damos la bienvenida a la plataforma!"
 
-#: openedx_basic_hooks/filters/pre_register.py:18
+#: build/lib/openedx_basic_hooks/filters/pre_register.py:23
+#: openedx_basic_hooks/filters/pre_register.py:23
 msgid "Your year of birth must be {} or before."
 msgstr "Su año de nacimiento debe ser {} o antes."
 
-#: openedx_basic_hooks/filters/pre_register.py:23
+#: build/lib/openedx_basic_hooks/filters/pre_register.py:28
+#: openedx_basic_hooks/filters/pre_register.py:28
 msgid "Invalid year of birth."
 msgstr "Año de nacimiento inválido."
+
+#: openedx_basic_hooks/actions/post_enrollment.py:16
+#, fuzzy, python-brace-format
+#| msgid "{user_full_name}, welcome to the platform!"
+msgid "{user_full_name}, welcome to the {course} course!"
+msgstr "{user_full_name}, ¡te damos la bienvenida a la plataforma!"
