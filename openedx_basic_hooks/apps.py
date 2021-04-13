@@ -25,5 +25,16 @@ class OpenEdxBasicHooksPluginConfig(AppConfig):
                 "test": {"relative_path": "settings.test"},
                 "production": {"relative_path": "settings.production"},
             },
-        }
+        },
+        "signals_config": {
+            "lms.djangoapp": {
+                "relative_path": "receivers",
+                "receivers": [
+                    {
+                        "receiver_func_name": "registration_receiver",
+                        "signal_path": "openedx_events.auth.signals.v1.REGISTER_USER",
+                    },
+                ],
+            }
+        },
     }
