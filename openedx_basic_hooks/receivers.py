@@ -2,11 +2,22 @@
 Receivers for the openedx-events signals.
 """
 
-from openedx_basic_hooks.actions.post_register import post_register_tweet
+
+def registration_receiver(*args, **kwargs):
+    """
+    Registration Open edX Event receiver.
+    """
+    pass
 
 
-def registration_receiver(user, registration, *args, **kwargs):
+def login_receiver(*args, **kwargs):
     """
-    Registration receiver.
+    Login Open edX Event receiver.
     """
-    post_register_tweet(user, registration, *args, **kwargs)
+    pass
+
+def enrollment_receiver(*args, **kwargs):
+    """
+    Login Open edX Event receiver.
+    """
+    pass

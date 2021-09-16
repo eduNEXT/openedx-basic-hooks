@@ -32,7 +32,15 @@ class OpenEdxBasicHooksPluginConfig(AppConfig):
                 "receivers": [
                     {
                         "receiver_func_name": "registration_receiver",
-                        "signal_path": "openedx_events.auth.signals.v1.REGISTER_USER",
+                        "signal_path": "openedx_events.learning.signals.STUDENT_REGISTRATION_COMPLETED",
+                    },
+                    {
+                        "receiver_func_name": "login_receiver",
+                        "signal_path": "openedx_events.learning.signals.SESSION_LOGIN_COMPLETED",
+                    },
+                    {
+                        "receiver_func_name": "enrollment_receiver",
+                        "signal_path": "openedx_events.learning.signals.COURSE_ENROLLMENT_CREATED",
                     },
                 ],
             }
